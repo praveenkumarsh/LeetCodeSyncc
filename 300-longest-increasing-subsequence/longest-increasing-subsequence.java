@@ -37,4 +37,37 @@ class Solution {
     //     int result = sol.lengthOfLIS(input);
     //     System.out.println("Length of LIS: " + result);
     // }
+
+    /*
+    class Solution {
+        public int lengthOfLIS(int[] nums) {
+            if (nums.length == 0) return 0;
+
+            int[] dp = new int[nums.length]; // dp[i] = LIS ending at i
+            Arrays.fill(dp, 1); // each number itself is a subsequence of length 1
+            int maxlen = 1;
+
+            for (int i = 1; i < nums.length; i++) {
+                for (int j = 0; j < i; j++) {
+                    // If nums[i] > nums[j], it can extend the LIS ending at j
+                    if (nums[i] > nums[j]) {
+                        dp[i] = Math.max(dp[i], dp[j] + 1);
+                    }
+                }
+                maxlen = Math.max(maxlen, dp[i]);
+                System.out.println("dp[" + i + "] = " + dp[i]);
+            }
+
+            return maxlen;
+        }
+
+        public static void main(String[] args) {
+            Solution sol = new Solution();
+            int[] input = {10, 9, 2, 5, 3, 7, 101, 18};
+            int result = sol.lengthOfLIS(input);
+            System.out.println("Length of LIS: " + result);
+        }
+    }
+
+    */
 }
