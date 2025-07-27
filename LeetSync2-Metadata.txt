@@ -1,1 +1,2 @@
 152-maximum-product-subarray|Medium|1753554600000
+300-longest-increasing-subsequence|Medium|1753641000000
